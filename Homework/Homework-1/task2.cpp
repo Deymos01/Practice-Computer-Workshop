@@ -8,7 +8,11 @@ int main() {
 
     if (a == 0) {
         if (b == 0) {
-            (c == 0) ? std::cout << "infinite number of solutions" : std::cout << "no solutions";
+            if (c == 0){
+                std::cout << "infinite number of solutions";
+            } else {
+                std::cout << "no solutions";
+            }
         } else {
             std::cout << "x = " << -c / b;
         }
