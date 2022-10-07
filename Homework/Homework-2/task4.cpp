@@ -21,7 +21,7 @@ int main() {
     for (int i = 0; i < 2 * n - 1; i++) {
         //Изменение количества выводимых звездочек
         //Если не дошли до середины ромба, то увеличиваем количество звездочек, иначе - уменьшаем
-        (i < (2 * n - 1) / 2 + 1) ? quantity_stars += 2 : quantity_stars -= 2;
+        quantity_stars += (i < (2 * n - 1) / 2 + 1) ? 2 : -2;
 
         for (int diamond = 0; diamond < quantity_diamonds; diamond++) {
 
