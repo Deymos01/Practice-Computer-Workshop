@@ -3,26 +3,27 @@
 int main() {
     int n;
     do {
-        std::cout << "Input N (N >= 0):";
+        std::cout << "Input N (N >= 0 and N <= 25):";
         std::cin >> n;
-    } while (n < 0);
+    } while (n < 0 || n > 25);
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 1; j < n - i; j++) {
+    int quantity_stars = -1;
+    for (int i = 0; i < 2 * n - 1; i++) {
+
+        //Печать пробелов перед звездочками
+        for (int k = 0; k < abs(n - i - 1); k++) {
             std::cout << " ";
         }
-        for (int j = 1; j <= 2 * i + 1; j++) {
+
+        //Изменение количества выводимых звездочек
+        //Если не дошли до середины ромба, то увеличиваем количество звездочек, иначе - уменьшаем
+        (i < (2 * n - 1) / 2 + 1) ? quantity_stars += 2 : quantity_stars -= 2;
+
+        //Вывод звездочек
+        for (int j = 0; j < quantity_stars; j++) {
             std::cout << "*";
         }
-        std::cout << std::endl;
-    }
-    for (int i = n - 1; i > 0; i--) {
-        for (int j = 0; j < n - i; j++) {
-            std::cout << " ";
-        }
-        for (int j = 2 * i - 1; j > 0; j--) {
-            std::cout << "*";
-        }
+
         std::cout << std::endl;
     }
 
