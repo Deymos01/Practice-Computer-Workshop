@@ -20,11 +20,7 @@ int main() {
 
         //Вывод звездочек
         for (int j = 0; j < quantity_stars; j++) {
-            if (j == 0 || j == quantity_stars - 1){
-                std::cout << "* ";
-            } else {
-                std::cout << "  ";
-            }
+            std::cout << ((j == 0 || j == quantity_stars - 1) ? "* " : "  ");
         }
 
         std::cout << std::endl;
