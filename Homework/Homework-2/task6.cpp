@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < 2 * n - 1; i++) {
         //Изменение количества выводимых звездочек
         //Если не дошли до середины ромба, то увеличиваем количество звездочек, иначе - уменьшаем
-        (i < (2 * n - 1) / 2 + 1) ? quantity_stars += 2 : quantity_stars -= 2;
+        quantity_stars += (i < (2 * n - 1) / 2 + 1) ? 2 : -2;
 
         //Печать пробелов перед звездочками
         for (int k = 0; k < std::abs(2 * (n - i - 1)); k++) {
@@ -20,11 +20,7 @@ int main() {
 
         //Вывод звездочек
         for (int j = 0; j < quantity_stars; j++) {
-            if (j == 0 || j == quantity_stars - 1){
-                std::cout << "* ";
-            } else {
-                std::cout << "  ";
-            }
+            std::cout << ((j == 0 || j == quantity_stars - 1) ? "* " : "  ");
         }
 
         std::cout << std::endl;
