@@ -14,7 +14,7 @@ int main() {
         (i < (2 * n - 1) / 2 + 1) ? quantity_stars += 2 : quantity_stars -= 2;
 
         //Печать пробелов перед звездочками
-        for (int k = 0; k < abs(2 * (n - i - 1)); k++) {
+        for (int k = 0; k < std::abs(2 * (n - i - 1)); k++) {
             std::cout << " ";
         }
 

@@ -10,9 +10,9 @@ int main() {
     double x, y = 1.5;
     double step_x = double(3) / double(width);
     double step_y = double(3) / double(height);
-    for (int row = 0; row < height; row++) {
+    for (int row = 0; row <= height; row++) {
         x = -1.5;
-        for (int col = 0; col < width; col++) {
+        for (int col = 0; col <= width; col++) {
             std::cout << (is_in_area(x, y) ? "*" : ".");
             x += step_x;
         }

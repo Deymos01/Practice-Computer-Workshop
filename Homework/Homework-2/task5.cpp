@@ -14,12 +14,12 @@ int main() {
         quantity_stars += (i < (2 * n - 1) / 2 + 1) ? 2 : -2;
 
         //Печать пробелов перед звездочками
-        for (int k = 0; k < abs(2 * (n - i - 1)); k++) {
+        for (int k = 0; k < std::abs(n - i - 1); k++) {
             std::cout << " ";
         }
 
         //Вывод звездочек
-        for (int j = 0; j < quantity_stars; j++) {
+        for (int j = 0; j < quantity_stars; j+=2) {
             std::cout << "* ";
         }
 
