@@ -11,12 +11,15 @@ int main() {
 
     std::cout << "Input x: ";
     std::cin >> x;
+
     double curr_sin = sin(x);
+    double s = curr_sin;
 
     for (int i = 1; i < n; i++){
-        curr_sin += sin(curr_sin);
+        s += sin(curr_sin);
+        curr_sin = sin(curr_sin);
     }
 
-    std::cout << curr_sin;
+    std::cout << s;
     return 0;
 }
