@@ -1,11 +1,8 @@
 #include <iostream>
 
 void reverseArray(int* arr, size_t n){
-	for (size_t indx = 0; indx < n / 2; ++indx){
-		std::swap(arr[indx], arr[n-indx-1]);
-	}
 	for (size_t indx = 0; indx < n; ++indx){
-		std::cout << arr[indx] << " ";
+		std::cout << arr[n - indx - 1] << " ";
 	}
 	std::cout << std::endl;
 }
