@@ -15,10 +15,18 @@ void printArray(int* arr, int n){
 
 
 void shiftArray(int arr[], int n, int k){
-	int arrBuff[n];
-	for (int i = 0; i < n; ++i){
-		arrBuff[n - k - i] = arr[i];
-	}
+    int *arrBuff = new int[n];
+    for (int i = 0; i < n; ++i){
+        if (n - k + i >= n){
+            arrBuff[i-k] = arr[i];
+        } else {
+            arrBuff[n - k + i] = arr[i];
+        }
+    }
+    for (int i = 0; i < n; ++i){
+        arr[i] = arrBuff[i];
+    }
+    delete[] arrBuff;
 }
 
 int main()
